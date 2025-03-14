@@ -45,12 +45,62 @@
   <script src="./data/results/model_scores.js" defer></script>
 
   <script src="./visualizer/data/data_public.js" defer></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C7GJ4FYMY9"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-C7GJ4FYMY9');
+  </script>
+
+  <!-- MathJax script -->
+  <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script type="text/javascript">
+      MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+  </script>
+
+  <noscript>
+      <p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101339888ns.gif" /></p>
+  </noscript>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      var toggles = document.querySelectorAll('.toggle-section');
+      toggles.forEach(function(toggle) {
+          toggle.addEventListener('click', function() {
+          var content = document.getElementById(toggle.getAttribute('aria-controls'));
+          var toggleIcon = toggle.children[1].children[0];
+          content.classList.toggle('is-active');
+          if (content.classList.contains('is-active')) {
+              toggleIcon.style.transition = 'transform 0.3s ease';
+              toggleIcon.style.transform = 'rotate(180deg)';
+          } else {
+              toggleIcon.style.transition = 'transform 0.3s ease';
+              toggleIcon.style.transform = 'rotate(0deg)';
+          }
+          });
+      });
+      });
+  </script>
 
   <style>
     .no-sort {
         cursor: default;
         pointer-events: none;
         background-image: none !important; /* Remove the sort arrow */
+    }
+    .collapse-content {
+        display: none;
+        margin-top: 10px;
+    }
+    .collapse-content.is-active {
+      display: block;
     }
   </style>
 
@@ -269,8 +319,8 @@
                   </b>
                 </td>
                 <td style="vertical-align: middle;">- </td>
-                <td style="vertical-align: middle;">1/0.5 fps<sup>1*</sup> </td>
-                <td style="vertical-align: middle;">2024-06-15</td>
+                <td style="vertical-align: middle;">111</td>
+                <td style="vertical-align: middle;">111</td>
                 <td style="vertical-align: middle;"><b class="">75.0</b></td>
                 <td style="vertical-align: middle;"><b class="">81.3</b></td>
                 <td style="vertical-align: middle;">81.7</td>
@@ -278,7 +328,13 @@
                 <td style="vertical-align: middle;">74.3</td>
                 <td style="vertical-align: middle;">81.0</td>
                 <td style="vertical-align: middle;">67.4</td>
-                <td style="vertical-align: middle;">77.4</td>                                 
+                <td style="vertical-align: middle;">77.4</td>
+                <td style="vertical-align: middle;">77.4</td>
+                <td style="vertical-align: middle;">77.4</td>
+                <td style="vertical-align: middle;">77.4</td>
+                <td style="vertical-align: middle;">77.4</td>
+                <td style="vertical-align: middle;">77.4</td>
+                <td style="vertical-align: middle;">77.4</td>                            
               </tr>
           
             </tbody>                                                   
