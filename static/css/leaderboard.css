@@ -771,3 +771,9 @@ a:hover::after {
     width: 100%;
     height: 100%;
   }
+
+  .a-button.active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1); /* 提高亮度 */
+  }
