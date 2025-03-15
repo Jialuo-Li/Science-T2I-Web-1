@@ -37,7 +37,7 @@
 #sortableTable th.sorted-asc::after {
     content: " ▲";
     position: absolute;
-    right: 100px;
+    left: 100px;
     animation: fadeIn 0.5s ease;
 }
 #sortableTable th.sorted-desc::after {
@@ -134,7 +134,7 @@
     background-color: #1a202c; 
 }
 
-#sortableTable thead tr:first-child th:nth-child(3),
+#sortableTable thead tr:first-child th[colspan="1"]:nth-child(3),
 #sortableTable thead tr:nth-child(2) th:nth-child(1) { 
     background-color: #4a5568;  
 }
