@@ -37,13 +37,13 @@
 #sortableTable th.sorted-asc::after {
     content: " ▲";
     position: absolute;
-    right: 80px;
+    right: 0;
     animation: fadeIn 0.5s ease;
 }
 #sortableTable th.sorted-desc::after {
     content: " ▼";
     position: absolute;
-    right: 80px;
+    right: 0;
     animation: fadeIn 0.5s ease;
 }
 #sortableTable tr:nth-child(even) {
@@ -92,7 +92,7 @@
 #sortableTable td:nth-child(15),
 #sortableTable td:nth-child(16),
 #sortableTable td:nth-child(17) {
-    background-color: #fff1f0;  /* 非常浅的红色 */
+    background-color: #fff1f0; 
 }
 
 /* MCQ (columns 6-7) */
@@ -134,13 +134,13 @@
     background-color: #1a202c; 
 }
 
-#sortableTable thead tr:first-child th:nth-child(3) { 
+#sortableTable thead tr:first-child th:nth-child(3),
+#sortableTable thead tr:nth-child(2) th:nth-child(1) { 
     background-color: #4a5568;  
 }
 
 /* LLM & #F 区域 */
 #sortableTable thead tr:first-child th[colspan="10"]:nth-of-type(4),
-#sortableTable thead tr:nth-child(2) th:nth-child(1),
 #sortableTable thead tr:nth-child(2) th:nth-child(2),
 #sortableTable thead tr:nth-child(2) th:nth-child(3),
 #sortableTable thead tr:nth-child(2) th:nth-child(4),
@@ -149,26 +149,27 @@
 #sortableTable thead tr:nth-child(2) th:nth-child(7),
 #sortableTable thead tr:nth-child(2) th:nth-child(8),
 #sortableTable thead tr:nth-child(2) th:nth-child(9),
-#sortableTable thead tr:nth-child(2) th:nth-child(10) {
+#sortableTable thead tr:nth-child(2) th:nth-child(10),
+#sortableTable thead tr:nth-child(2) th:nth-child(11) {
     background-color: #3C64AB;  
 }
 
 /* MCQ 区域 */
 #sortableTable thead tr:first-child th[colspan="4"]:nth-of-type(5),
-#sortableTable thead tr:nth-child(2) th:nth-child(11),
 #sortableTable thead tr:nth-child(2) th:nth-child(12),
 #sortableTable thead tr:nth-child(2) th:nth-child(13),
-#sortableTable thead tr:nth-child(2) th:nth-child(14) {
+#sortableTable thead tr:nth-child(2) th:nth-child(14),
+#sortableTable thead tr:nth-child(2) th:nth-child(15) {
     background-color: #ab3c3c;  
 }
 
 /* Cred. Eval. 区域 */
 #sortableTable thead tr:first-child th[colspan="5"],
-#sortableTable thead tr:nth-child(2) th:nth-child(15),
 #sortableTable thead tr:nth-child(2) th:nth-child(16),
 #sortableTable thead tr:nth-child(2) th:nth-child(17),
 #sortableTable thead tr:nth-child(2) th:nth-child(18),
-#sortableTable thead tr:nth-child(2) th:nth-child(19) {
+#sortableTable thead tr:nth-child(2) th:nth-child(19),
+#sortableTable thead tr:nth-child(2) th:nth-child(20) {
     background-color: #4ca56f; 
 }
 
