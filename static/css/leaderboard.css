@@ -37,7 +37,7 @@
 #sortableTable th.sorted-asc::after {
     content: " ▲";
     position: absolute;
-    right: 100px;
+    right: 0px;
     animation: fadeIn 0.5s ease;
 }
 #sortableTable th.sorted-desc::after {
