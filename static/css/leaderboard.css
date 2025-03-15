@@ -73,29 +73,37 @@
 }
 
 /* LLM & #F (columns 3-5) */
-#sortableTable td:nth-child(3),
-#sortableTable td:nth-child(4),
-#sortableTable td:nth-child(5) {
+#sortableTable td:nth-child(3) {
     background-color: #edf2f7;  /* 浅灰色 */
 }
 
-/* MCQ (columns 6-7) */
+#sortableTable td:nth-child(4),
+#sortableTable td:nth-child(5),
 #sortableTable td:nth-child(6),
-#sortableTable td:nth-child(7) {
-    background-color: #e6ffed;  /* 非常浅的绿色 */
-}
-
-/* Cred. Eval. (columns 8-11) */
+#sortableTable td:nth-child(7),
 #sortableTable td:nth-child(8),
 #sortableTable td:nth-child(9),
 #sortableTable td:nth-child(10),
-#sortableTable td:nth-child(11) {
+#sortableTable td:nth-child(11),
+#sortableTable td:nth-child(12),
+#sortableTable td:nth-child(13) {
+    background-color: #e6ffed;  /* 非常浅的绿色 */
+}
+
+#sortableTable td:nth-child(14),
+#sortableTable td:nth-child(15),
+#sortableTable td:nth-child(16),
+#sortableTable td:nth-child(17) {
     background-color: #fff1f0;  /* 非常浅的红色 */
 }
 
-/* Open-Ended (column 12) */
-#sortableTable td:nth-child(12) {
-    background-color: #fff7e6;  /* 非常浅的橙色 */
+/* MCQ (columns 6-7) */
+#sortableTable td:nth-child(18),
+#sortableTable td:nth-child(19),
+#sortableTable td:nth-child(20),
+#sortableTable td:nth-child(21),
+#sortableTable td:nth-child(22) {
+    background-color: #e6ffed;  /* 非常浅的绿色 */
 }
 
 /* 奇数行稍微深一点的背景色 */
@@ -163,7 +171,7 @@
 #sortableTable thead tr:nth-child(2) th:nth-child(17),
 #sortableTable thead tr:nth-child(2) th:nth-child(18),
 #sortableTable thead tr:nth-child(2) th:nth-child(19) {
-    background-color: #3c8a5f;  /* 深红色 */
+    background-color: #3c8a5f; 
 }
 
 /* 表头悬停效果 */
