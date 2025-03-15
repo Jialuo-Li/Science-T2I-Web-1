@@ -1,15 +1,20 @@
-function showTable(tableId) {
-    var table1 = document.getElementById('table1');
-    var table2 = document.getElementById('table2');
-  
-    if (tableId === 'table1') {
-      table1.style.display = 'table';
-      table2.style.display = 'none';
-    } else if (tableId === 'table2') {
-      table1.style.display = 'none';
-      table2.style.display = 'table';
-    }
-  }
+// 获取按钮和表格容器
+const showTable1Button = document.getElementById('showTable1');
+const showTable2Button = document.getElementById('showTable2');
+const table1Container = document.getElementById('table1Container');
+const table2Container = document.getElementById('table2Container');
+
+// 添加事件监听器
+showTable1Button.addEventListener('click', () => {
+  table1Container.style.display = 'block';
+  table2Container.style.display = 'none';
+});
+
+showTable2Button.addEventListener('click', () => {
+  table1Container.style.display = 'none';
+  table2Container.style.display = 'block';
+});
+
 
 
 function sortTable(columnIndex) {
