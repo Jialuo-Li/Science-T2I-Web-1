@@ -313,56 +313,23 @@ img {
     transform: scaleX(1);
 }
 
-.button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
+/* .button {
     font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
     color: white;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    overflow: hidden;
-}
+    background-color: #3182ce;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin: 5px;
+} */
 
-  /* 按钮1渐变背景 */
-#showTable1 {
-    background: linear-gradient(135deg, #4CAF50, #81C784);
-}
-
-  /* 按钮2渐变背景 */
-#showTable2 {
-    background: linear-gradient(135deg, #2196F3, #64B5F6);
-}
-
-  /* 悬停效果 */
 .button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-  /* 悬浮时的背景动画 */
-.button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: translate(-50%, -50%) rotate(45deg);
-    transition: all 0.5s ease;
-    opacity: 0;
-}
-
-.button:hover::after {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
+    background-color: #2b6cb0;
+    transform: translateY(-3px);
 }
 
 .styled-button {
