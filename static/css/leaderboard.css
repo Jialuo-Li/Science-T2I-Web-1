@@ -383,3 +383,82 @@ a::after {
 a:hover::after {
     transform: scaleX(1);
 }
+
+
+.leaderboard-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .leaderboard-header h1 {
+    font-size: 48px;
+    color: #2d3748;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .leaderboard-description {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 17px;
+    text-align: left;
+    background: #f7fafc;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .leaderboard-description ul {
+    margin: 15px 0;
+    padding-left: 20px;
+  }
+
+  .leaderboard-description li {
+    margin: 8px 0;
+  }
+
+  .leaderboard-description strong {
+    color: #2d3748;
+  }
+
+  .font-size-controls {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+  }
+
+  .font-button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background-color: #4a5568;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+  }
+
+  .font-button:hover {
+      background-color: #2d3748;
+      transform: scale(1.1);
+  }
+
+  .font-button span {
+      font-size: 16px;
+  }

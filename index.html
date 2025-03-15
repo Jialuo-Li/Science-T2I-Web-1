@@ -33,7 +33,7 @@
 
   <script type="text/javascript" src="static/js/sort-table.js" defer></script>
   <link rel="stylesheet" href="./static/css/leaderboard.css">
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -221,6 +221,86 @@
             <p>Accuracy scores on Video-MME are presented for short, medium, and long videos, taking the corresponding subtitles as input or not.
             </p>
           </div>
+
+          <div class="font-size-controls">
+            <button onclick="adjustFontSize('increase')" class="font-button">
+              <span>A+</span>
+            </button>
+            <button onclick="adjustFontSize('decrease')" class="font-button">
+              <span>A-</span>
+            </button>
+          </div>
+        
+          <div style="width: 100%; margin:0 auto; text-align: center">
+            <table id="sortableTable">
+              <thead>
+                  <tr>
+                      <th rowspan="2">Rank</th>
+                      <th rowspan="2">Models</th>
+                      <th rowspan="2">Overall</th>
+                      <th colspan="10">Physics</th>
+                      <th colspan="4">Chemistry</th>
+                      <th colspan="5">Biology</th>
+                  </tr>
+                  <tr>
+                    <!-- <th onclick="sortTable(0)">Models</th> -->
+                      <th onclick="sortTable(4)">GA</th>
+                      <th onclick="sortTable(5)">SO</th>
+                      <th onclick="sortTable(6)">ME</th>
+                      <th onclick="sortTable(7)">AB</th>
+                      <th onclick="sortTable(8)">BU</th>
+                      <th onclick="sortTable(9)">DI</th>
+                      <th onclick="sortTable(10)">EL</th>
+                      <th onclick="sortTable(11)">EV</th>
+                      <th onclick="sortTable(12)">LI</th>
+                      <th onclick="sortTable(13)">Avg</th>
+                      <th onclick="sortTable(14)">RU</th>
+                      <th onclick="sortTable(15)">IM</th>
+                      <th onclick="sortTable(16)">FR</th>
+                      <th onclick="sortTable(17)">Avg</th>
+                      <th onclick="sortTable(18)">LR</th>
+                      <th onclick="sortTable(19)">WR</th>
+                      <th onclick="sortTable(20)">SC</th>
+                      <th onclick="sortTable(21)">RI</th>
+                      <th onclick="sortTable(22)">Avg</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>1</td>
+                      <td><a href="https://github.com/OpenGVLab/Ask-Anything">Videochat2</a></td>
+                      <td>7B</td>
+                      <td>16</td>
+                      <td>16</td>
+                      <td>35.5</td>
+                      <td>19.1</td>
+                      <td>1.07</td>
+                      <td>1.91</td>
+                      <td>0.91</td>
+                      <td>53.8</td>
+                      <td>18.4</td>
+                  </tr>
+                  <tr>
+                      <td>2</td>
+                      <td><a href="https://github.com/DAMO-NLP-SG/Video-LLaMA">VideoLLaMA</a></td>
+                      <td>7B</td>
+                      <td>32</td>
+                      <td>32</td>
+                      <td>36.5</td>
+                      <td>18.0</td>
+                      <td>1.14</td>
+                      <td>1.93</td>
+                      <td>0.74</td>
+                      <td>49.3</td>
+                      <td>16.0</td>
+                  </tr>
+                  
+              </tbody>
+            </table>
+          </div>
+        
+
+
           <table class="js-sort-table" id="results" style="margin-left: auto; margin-right: auto;">
             <thead>
               <tr>
@@ -403,162 +483,6 @@
         </script>
     </div>
   </div>
-
-  <div class="leaderboard-header" id="leaderboard">
-    <h1>Leaderboard</h1>
-  </div>
-
-  <div class="font-size-controls">
-    <button onclick="adjustFontSize('increase')" class="font-button">
-      <span>A+</span>
-    </button>
-    <button onclick="adjustFontSize('decrease')" class="font-button">
-      <span>A-</span>
-    </button>
-  </div>
-
-  <style>
-    .leaderboard-header {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .leaderboard-header h1 {
-      font-size: 48px;
-      color: #2d3748;
-      margin-bottom: 30px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    .leaderboard-description {
-      max-width: 1200px;
-      margin: 0 auto;
-      color: #4a5568;
-      line-height: 1.6;
-      font-size: 17px;
-      text-align: left;
-      background: #f7fafc;
-      padding: 20px 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .leaderboard-description ul {
-      margin: 15px 0;
-      padding-left: 20px;
-    }
-
-    .leaderboard-description li {
-      margin: 8px 0;
-    }
-
-    .leaderboard-description strong {
-      color: #2d3748;
-    }
-
-    .font-size-controls {
-        position: fixed;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        z-index: 1000;
-    }
-
-    .font-button {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: none;
-        background-color: #4a5568;
-        color: white;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        transition: all 0.3s ease;
-    }
-
-    .font-button:hover {
-        background-color: #2d3748;
-        transform: scale(1.1);
-    }
-
-    .font-button span {
-        font-size: 16px;
-    }
-  </style>
-
-  <div style="width: 100%; margin:0 auto; text-align: center">
-    <table id="sortableTable">
-      <thead>
-          <tr>
-              <th rowspan="2">Rank</th>
-              <th rowspan="2">Models</th>
-              <th colspan="1">LLM</th>
-              <th colspan="2">#F</th>
-              <th colspan="2">MCQ</th>
-              <th colspan="4">Cred. Eval.</th>
-              <th rowspan="1">Open-Ended</th>
-          </tr>
-          <tr>
-            <!-- <th onclick="sortTable(0)">Models</th> -->
-              <th>#param</th>
-              <th>clue</th>
-              <th>long</th>
-              <th onclick="sortTable(5)">clue-acc.</th>
-              <th onclick="sortTable(6)">long-acc.</th>
-              <th onclick="sortTable(7)">mIoU</th>
-              <th onclick="sortTable(8)">rec.@IoU</th>
-              <th onclick="sortTable(9)">acc.@IoU</th>
-              <th onclick="sortTable(10)">CRR</th>
-              <th onclick="sortTable(11)">acc.</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>1</td>
-              <td><a href="https://github.com/OpenGVLab/Ask-Anything">Videochat2</a></td>
-              <td>7B</td>
-              <td>16</td>
-              <td>16</td>
-              <td>35.5</td>
-              <td>19.1</td>
-              <td>1.07</td>
-              <td>1.91</td>
-              <td>0.91</td>
-              <td>53.8</td>
-              <td>18.4</td>
-          </tr>
-          <tr>
-              <td>2</td>
-              <td><a href="https://github.com/DAMO-NLP-SG/Video-LLaMA">VideoLLaMA</a></td>
-              <td>7B</td>
-              <td>32</td>
-              <td>32</td>
-              <td>36.5</td>
-              <td>18.0</td>
-              <td>1.14</td>
-              <td>1.93</td>
-              <td>0.74</td>
-              <td>49.3</td>
-              <td>16.0</td>
-          </tr>
-          
-      </tbody>
-  </table>
-  </div>
-
-
-
 
 </section>
 
