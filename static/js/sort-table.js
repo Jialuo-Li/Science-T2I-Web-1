@@ -1,5 +1,5 @@
-function sortTable(columnIndex) {
-    const table = document.getElementById("sortableTable");
+function sortTable(tableId, columnIndex) {
+    const table = document.getElementById(tableId);
     let rows = Array.from(table.tBodies[0].rows);
     let isAscending = table.getAttribute("data-sort-order") === "asc";
 
