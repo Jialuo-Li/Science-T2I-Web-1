@@ -1,22 +1,3 @@
-// 获取按钮和表格容器
-const showTable1Button = document.getElementById('showTable1');
-const showTable2Button = document.getElementById('showTable2');
-const table1Container = document.getElementById('table1Container');
-const table2Container = document.getElementById('table2Container');
-
-// 添加事件监听器
-showTable1Button.addEventListener('click', () => {
-  table1Container.style.display = 'block';
-  table2Container.style.display = 'none';
-});
-
-showTable2Button.addEventListener('click', () => {
-  table1Container.style.display = 'none';
-  table2Container.style.display = 'block';
-});
-
-
-
 function sortTable(columnIndex) {
     const table = document.getElementById("sortableTable");
     let rows = Array.from(table.tBodies[0].rows);
