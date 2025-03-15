@@ -327,26 +327,26 @@ img {
     gap: 8px;
     position: relative;
     overflow: hidden;
-  }
+}
 
   /* 按钮1渐变背景 */
-  #showTable1 {
+#showTable1 {
     background: linear-gradient(135deg, #4CAF50, #81C784);
-  }
+}
 
   /* 按钮2渐变背景 */
-  #showTable2 {
+#showTable2 {
     background: linear-gradient(135deg, #2196F3, #64B5F6);
-  }
+}
 
   /* 悬停效果 */
-  .button:hover {
+.button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
+}
 
   /* 悬浮时的背景动画 */
-  .button::after {
+.button::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -357,13 +357,13 @@ img {
     transform: translate(-50%, -50%) rotate(45deg);
     transition: all 0.5s ease;
     opacity: 0;
-  }
+}
 
-  .button:hover::after {
+.button:hover::after {
     opacity: 1;
     width: 100%;
     height: 100%;
-  }
+}
 
 .styled-button {
     font-size: 20px;
