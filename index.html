@@ -30,9 +30,7 @@
 
   <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bootstrap4.min.css" rel="stylesheet">
   <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script>
-
-  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
-  <link rel="stylesheet" href="./static/css/leaderboard.css">
+  <!-- <link rel="stylesheet" href="./static/css/leaderboard.css"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -84,7 +82,8 @@
       });
       });
   </script>
-  
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
 
 </head>
 <body>
@@ -965,68 +964,20 @@
   showTable1Button.addEventListener('click', () => {
     table1Container.style.display = 'block';
     table2Container.style.display = 'none';
+    showTable1Button.classList.add('active'); // 激活按钮1
+    showTable2Button.classList.remove('active'); // 取消激活按钮2
   });
 
   showTable2Button.addEventListener('click', () => {
     table1Container.style.display = 'none';
     table2Container.style.display = 'block';
+    showTable2Button.classList.add('active'); // 激活按钮2
+    showTable1Button.classList.remove('active'); // 取消激活按钮1
   });
+
+  // 默认显示 Table 1
+  showTable1Button.classList.add('active');
 </script>
-<!-- 
-<style>
-  .a-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* 按钮1渐变背景 */
-  #showTable1 {
-    background: linear-gradient(135deg, #4CAF50, #81C784);
-  }
-
-  /* 按钮2渐变背景 */
-  #showTable2 {
-    background: linear-gradient(135deg, #2196F3, #64B5F6);
-  }
-
-  /* 悬停效果 */
-  .a-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
-
-  /* 悬浮时的背景动画 */
-  .a-button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: rgba(255, 255, 255, 0.2);
-    transform: translate(-50%, -50%) rotate(45deg);
-    transition: all 0.5s ease;
-    opacity: 0;
-  }
-
-  .a-button:hover::after {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-  }
-</style> -->
-<link rel="stylesheet" href="./static/css/leaderboard.css">
 </body>
 </html>
 
