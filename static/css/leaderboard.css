@@ -134,23 +134,32 @@
 
 /* LLM & #F 区域 */
 #sortableTable thead tr:first-child th[colspan="10"]:nth-of-type(4),
-#sortableTable thead tr:nth-child(4) {
+#sortableTable thead tr:nth-child(2) th:nth-child(1),
+#sortableTable thead tr:nth-child(2) th:nth-child(2),
+#sortableTable thead tr:nth-child(2) th:nth-child(3),
+#sortableTable thead tr:nth-child(2) th:nth-child(4),
+#sortableTable thead tr:nth-child(2) th:nth-child(5),
+#sortableTable thead tr:nth-child(2) th:nth-child(6),
+#sortableTable thead tr:nth-child(2) th:nth-child(7),
+#sortableTable thead tr:nth-child(2) th:nth-child(8),
+#sortableTable thead tr:nth-child(2) th:nth-child(9),
+#sortableTable thead tr:nth-child(2) th:nth-child(10) {
     background-color: #3212AA;  /* 深灰色 */
 }
 
 /* MCQ 区域 */
 #sortableTable thead tr:first-child th[colspan="2"]:nth-of-type(5),
-#sortableTable thead tr:nth-child(2) th:nth-child(4),
-#sortableTable thead tr:nth-child(2) th:nth-child(5) {
+#sortableTable thead tr:nth-child(2) th:nth-child(11),
+#sortableTable thead tr:nth-child(2) th:nth-child(12) {
     background-color: #3c8a5f;  /* 深绿色 */
 }
 
 /* Cred. Eval. 区域 */
 #sortableTable thead tr:first-child th[colspan="4"],
-#sortableTable thead tr:nth-child(2) th:nth-child(6),
-#sortableTable thead tr:nth-child(2) th:nth-child(7),
-#sortableTable thead tr:nth-child(2) th:nth-child(8),
-#sortableTable thead tr:nth-child(2) th:nth-child(9) {
+#sortableTable thead tr:nth-child(2) th:nth-child(13),
+#sortableTable thead tr:nth-child(2) th:nth-child(14),
+#sortableTable thead tr:nth-child(2) th:nth-child(15),
+#sortableTable thead tr:nth-child(2) th:nth-child(16) {
     background-color: #9b2c2c;  /* 深红色 */
 }
 
