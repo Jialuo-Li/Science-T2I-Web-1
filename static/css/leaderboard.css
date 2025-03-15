@@ -148,25 +148,22 @@
 }
 
 /* MCQ 区域 */
-#sortableTable thead tr:first-child th[colspan="2"]:nth-of-type(5),
+#sortableTable thead tr:first-child th[colspan="4"]:nth-of-type(5),
 #sortableTable thead tr:nth-child(2) th:nth-child(11),
-#sortableTable thead tr:nth-child(2) th:nth-child(12) {
-    background-color: #3c8a5f;  /* 深绿色 */
+#sortableTable thead tr:nth-child(2) th:nth-child(12),
+#sortableTable thead tr:nth-child(2) th:nth-child(13),
+#sortableTable thead tr:nth-child(2) th:nth-child(14) {
+    background-color: #9b2c2c;  
 }
 
 /* Cred. Eval. 区域 */
-#sortableTable thead tr:first-child th[colspan="4"],
-#sortableTable thead tr:nth-child(2) th:nth-child(13),
-#sortableTable thead tr:nth-child(2) th:nth-child(14),
+#sortableTable thead tr:first-child th[colspan="5"],
 #sortableTable thead tr:nth-child(2) th:nth-child(15),
-#sortableTable thead tr:nth-child(2) th:nth-child(16) {
-    background-color: #9b2c2c;  /* 深红色 */
-}
-
-/* Open-Ended 区域 */
-#sortableTable thead tr:first-child th:last-child,
-#sortableTable thead tr:nth-child(2) th:last-child {
-    background-color: #9c4221;  /* 深棕色 */
+#sortableTable thead tr:nth-child(2) th:nth-child(16),
+#sortableTable thead tr:nth-child(2) th:nth-child(17),
+#sortableTable thead tr:nth-child(2) th:nth-child(18),
+#sortableTable thead tr:nth-child(2) th:nth-child(19) {
+    background-color: #3c8a5f;  /* 深红色 */
 }
 
 /* 表头悬停效果 */
