@@ -474,29 +474,6 @@ img {
     transition: all 0.3s ease;
 }
 
-/* 添加行交换动画的类 */
-.row-transition {
-    animation: rowMove 0.5s ease;
-}
-
-@keyframes rowMove {
-    0% { opacity: 0.5; transform: translateY(-10px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* 为所有图片添加过渡效果 */
-img {
-    transition: transform 0.3s ease;
-    display: block;  /* 确保margin: auto生效 */
-    max-width: 100%;  /* 保持响应式 */
-}
-
-
-/* 可选：添加平滑阴影效果增强视觉体验 */
-img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
 /* 为前三设的高度、字体大小和粗细的过渡效果 */
 #sortableTable2 tbody tr:nth-child(1) {
     height: 80px;  /* 第一行最高 */
@@ -552,9 +529,6 @@ img {
 #sortableTable2 tbody td {
     vertical-align: middle;
 }
-
-
-
 
 
 .name-link {
@@ -742,4 +716,58 @@ a:hover::after {
 
   .font-button span {
       font-size: 16px;
+  }
+
+
+
+  .a-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 按钮1渐变背景 */
+  #showTable1 {
+    background: linear-gradient(135deg, #4CAF50, #81C784);
+  }
+
+  /* 按钮2渐变背景 */
+  #showTable2 {
+    background: linear-gradient(135deg, #2196F3, #64B5F6);
+  }
+
+  /* 悬停效果 */
+  .a-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  /* 悬浮时的背景动画 */
+  .a-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+
+  .a-button:hover::after {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
   }
