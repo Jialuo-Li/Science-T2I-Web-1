@@ -241,7 +241,7 @@
                 <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 150px; background-color: #1B212D;" data-js-sort-colNum="none">
                     Model
                 </th>
-                <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 100px; background-color: #4A5568;" data-js-sort-colNum="none">
+                <th rowspan="2" style="vertical-align: middle; width: 100px; background-color: #4A5568;" data-js-sort-colNum="none">
                     Overall
                 </th>
                 <th colspan="10" class="no-sort" style="vertical-align: middle; width: 300px; background-color: #2C549B" data-js-sort-colNum="12">
@@ -414,6 +414,442 @@
         </script>
     </div>
   </div>
+
+  <div class="leaderboard-header" id="leaderboard">
+    <h1>Leaderboard</h1>
+  </div>
+
+  <div class="font-size-controls">
+    <button onclick="adjustFontSize('increase')" class="font-button">
+      <span>A+</span>
+    </button>
+    <button onclick="adjustFontSize('decrease')" class="font-button">
+      <span>A-</span>
+    </button>
+  </div>
+
+  <style>
+    .leaderboard-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .leaderboard-header h1 {
+      font-size: 48px;
+      color: #2d3748;
+      margin-bottom: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .leaderboard-description {
+      max-width: 1200px;
+      margin: 0 auto;
+      color: #4a5568;
+      line-height: 1.6;
+      font-size: 17px;
+      text-align: left;
+      background: #f7fafc;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .leaderboard-description ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    .leaderboard-description li {
+      margin: 8px 0;
+    }
+
+    .leaderboard-description strong {
+      color: #2d3748;
+    }
+
+    .font-size-controls {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+    }
+
+    .font-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: #4a5568;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+
+    .font-button:hover {
+        background-color: #2d3748;
+        transform: scale(1.1);
+    }
+
+    .font-button span {
+        font-size: 16px;
+    }
+  </style>
+
+  <div style="width:1400px; margin:0 auto; text-align: center">
+    <table id="sortableTable">
+      <thead>
+          <tr>
+              <th rowspan="2">Rank</th>
+              <th rowspan="2">Models</th>
+              <th colspan="1">LLM</th>
+              <th colspan="2">#F</th>
+              <th colspan="2">MCQ</th>
+              <th colspan="4">Cred. Eval.</th>
+              <th rowspan="1">Open-Ended</th>
+          </tr>
+          <tr>
+            <!-- <th onclick="sortTable(0)">Models</th> -->
+              <th>#param</th>
+              <th>clue</th>
+              <th>long</th>
+              <th onclick="sortTable(5)">clue-acc.</th>
+              <th onclick="sortTable(6)">long-acc.</th>
+              <th onclick="sortTable(7)">mIoU</th>
+              <th onclick="sortTable(8)">rec.@IoU</th>
+              <th onclick="sortTable(9)">acc.@IoU</th>
+              <th onclick="sortTable(10)">CRR</th>
+              <th onclick="sortTable(11)">acc.</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>1</td>
+              <td><a href="https://github.com/OpenGVLab/Ask-Anything">Videochat2</a></td>
+              <td>7B</td>
+              <td>16</td>
+              <td>16</td>
+              <td>35.5</td>
+              <td>19.1</td>
+              <td>1.07</td>
+              <td>1.91</td>
+              <td>0.91</td>
+              <td>53.8</td>
+              <td>18.4</td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td><a href="https://github.com/DAMO-NLP-SG/Video-LLaMA">VideoLLaMA</a></td>
+              <td>7B</td>
+              <td>32</td>
+              <td>32</td>
+              <td>36.5</td>
+              <td>18.0</td>
+              <td>1.14</td>
+              <td>1.93</td>
+              <td>0.74</td>
+              <td>49.3</td>
+              <td>16.0</td>
+          </tr>
+          <tr>
+              <td>3</td>
+              <td><a href="https://github.com/PKU-YuanGroup/Video-LLaVA">Video-LLaVA</a></td>
+              <td>7B</td>
+              <td>8</td>
+              <td>8</td>
+              <td>33.4</td>
+              <td>16.8</td>
+              <td>1.01</td>
+              <td>1.89</td>
+              <td>0.64</td>
+              <td>50.3</td>
+              <td>12.0</td>
+          </tr>
+          <tr>
+              <td>4</td>
+              <td><a href="https://github.com/TencentARC/ST-LLM">ST-LLM</a></td>
+              <td>7B</td>
+              <td>32</td>
+              <td>64</td>
+              <td>39.1</td>
+              <td>24.7</td>
+              <td>2.13</td>
+              <td>2.83</td>
+              <td>1.27</td>
+              <td>63.2</td>
+              <td>20.0</td>
+          </tr>
+          <tr>
+              <td>5</td>
+              <td><a href="https://github.com/PKU-YuanGroup/Chat-UniVi">Chat-UniVi-v1.5</a></td>
+              <td>13B</td>
+              <td>32</td>
+              <td>64</td>
+              <td>41.2</td>
+              <td>26.7</td>
+              <td>1.91</td>
+              <td>2.45</td>
+              <td>1.29</td>
+              <td>64.7</td>
+              <td>21.8</td>
+          </tr>
+          <tr>
+              <td>6</td>
+              <td><a href="https://sharegpt4video.github.io">ShareGPT4Video</a></td>
+              <td>16B</td>
+              <td>16</td>
+              <td>16</td>
+              <td>40.9</td>
+              <td>27.1</td>
+              <td>2.07</td>
+              <td>2.39</td>
+              <td>1.02</td>
+              <td>66.4</td>
+              <td>21.5</td>
+          </tr>
+          <tr>
+              <td>7</td>
+              <td><a href="https://github.com/QwenLM/Qwen-VL">Qwen-VL-Chat</a></td>
+              <td>7B</td>
+              <td>4</td>
+              <td>4</td>
+              <td>37.7</td>
+              <td>20.7</td>
+              <td>0.93</td>
+              <td>1.06</td>
+              <td>0.52</td>
+              <td>54.9</td>
+              <td>20.1</td>
+          </tr>
+          <tr>
+              <td>8</td>
+              <td><a href="https://github.com/NVlabs/VILA">ViLA</a></td>
+              <td>8B</td>
+              <td>14</td>
+              <td>14</td>
+              <td>41.4</td>
+              <td>28.1</td>
+              <td>1.98</td>
+              <td>2.51</td>
+              <td>1.43</td>
+              <td>67.8</td>
+              <td>23.8</td>
+          </tr>
+          <tr>
+              <td>9</td>
+              <td><a href="https://github.com/OpenGVLab/InternVL">InternVL-Chat-v1.5</a></td>
+              <td>20B</td>
+              <td>10</td>
+              <td>10</td>
+              <td>42.0</td>
+              <td>28.5</td>
+              <td>1.85</td>
+              <td>2.48</td>
+              <td>1.09</td>
+              <td>67.9</td>
+              <td>22.9</td>
+          </tr>
+          <tr>
+              <td>10</td>
+              <td><a href="https://github.com/OpenBMB/MiniCPM-V">MiniCPM-v2.6</a></td>
+              <td>8B</td>
+              <td>32</td>
+              <td>32</td>
+              <td>44.4</td>
+              <td>29.9</td>
+              <td>2.27</td>
+              <td>2.41</td>
+              <td>0.94</td>
+              <td>67.3</td>
+              <td>26.3</td>
+          </tr>
+          <tr>
+              <td>11</td>
+              <td><a href="https://github.com/KangarooGroup/Kangaroo">Kangaroo</a></td>
+              <td>8B</td>
+              <td>32</td>
+              <td>64</td>
+              <td>46.4</td>
+              <td>31.2</td>
+              <td>2.32</td>
+              <td>2.97</td>
+              <td>1.54</td>
+              <td>67.2</td>
+              <td>25.9</td>
+          </tr>
+          <tr>
+              <td>12</td>
+              <td><a href="https://github.com/LLaVA-VL/LLaVA-NeXT/tree/main">LLaVA-OneVision</a></td>
+              <td>7B</td>
+              <td>16</td>
+              <td>16</td>
+              <td>43.7</td>
+              <td>30.9</td>
+              <td>1.56</td>
+              <td>1.72</td>
+              <td>1.19</td>
+              <td>70.7</td>
+              <td>25.0</td>
+          </tr>
+          <tr>
+              <td>13</td>
+              <td><a href="https://github.com/QQ-MM/Video-CCAM">Video-CCAM</a></td>
+              <td>14B</td>
+              <td>32</td>
+              <td>96</td>
+              <td>42.9</td>
+              <td>29.1</td>
+              <td>2.76</td>
+              <td>3.57</td>
+              <td>1.85</td>
+              <td>67.8</td>
+              <td>24.8</td>
+          </tr>
+          <tr>
+              <td>14</td>
+              <td><a href="https://github.com/EvolvingLMMs-Lab/LongVA">LongVA</a></td>
+              <td>7B</td>
+              <td>32</td>
+              <td>128</td>
+              <td>42.6</td>
+              <td>28.7</td>
+              <td>2.91</td>
+              <td>3.15</td>
+              <td>1.32</td>
+              <td>67.4</td>
+              <td>24.2</td>
+          </tr>
+          <tr>
+              <td>15</td>
+              <td><a href="https://vita-home.github.io/">VITA</a></td>
+              <td>8x7B</td>
+              <td>32</td>
+              <td>32</td>
+              <td>47.4</td>
+              <td>33.0</td>
+              <td>2.99</td>
+              <td>3.16</td>
+              <td>2.15</td>
+              <td>69.6</td>
+              <td>28.0</td>
+          </tr>
+          <tr>
+              <td>16</td>
+              <td><a href="https://github.com/QwenLM/Qwen2-VL">Qwen2-VL</a></td>
+              <td>72B</td>
+              <td>32</td>
+              <td>128</td>
+              <td>57.8</td>
+              <td>45.3</td>
+              <td>3.64</td>
+              <td>5.11</td>
+              <td>3.17</td>
+              <td>78.4</td>
+              <td>33.7</td>
+          </tr>
+          <tr>
+              <td>17</td>
+              <td><a href="https://internvl.github.io/blog/2024-12-05-InternVL-2.5/">InternVL2.5</a></td>
+              <td>72B</td>
+              <td>32</td>
+              <td>32</td>
+              <td>59.5</td>
+              <td>44.2</td>
+              <td>3.90</td>
+              <td>5.05</td>
+              <td>2.46</td>
+              <td>74.3</td>
+              <td>34.2</td>
+          </tr>
+          <tr>
+              <td>18</td>
+              <td><a href="https://openai.com/index/hello-gpt-4o/">GPT-4o-08-06</a></td>
+              <td>-</td>
+              <td>32</td>
+              <td>128</td>
+              <td>58.6</td>
+              <td>44.9</td>
+              <td>5.73</td>
+              <td>8.12</td>
+              <td>4.33</td>
+              <td>76.6</td>
+              <td>39.2</td>
+          </tr>
+          <tr>
+              <td>19</td>
+              <td><a href="https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/">GPT-4mini-08-06</a></td>
+              <td>-</td>
+              <td>32</td>
+              <td>128</td>
+              <td>48.4</td>
+              <td>32.6</td>
+              <td>3.68</td>
+              <td>5.07</td>
+              <td>2.13</td>
+              <td>67.4</td>
+              <td>24.9</td>
+          </tr>
+          <tr>
+              <td>20</td>
+              <td><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">Gemini-1.5-Pro</a></td>
+              <td>-</td>
+              <td>32</td>
+              <td>128</td>
+              <td>50.9</td>
+              <td>37.8</td>
+              <td>3.85</td>
+              <td>5.61</td>
+              <td>2.64</td>
+              <td>74.3</td>
+              <td>28.7</td>
+          </tr>
+          <tr>
+              <td>21</td>
+              <td><a href="https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf">Gemini-1.5-Flash</a></td>
+              <td>-</td>
+              <td>32</td>
+              <td>128</td>
+              <td>48.4</td>
+              <td>33.5</td>
+              <td>3.43</td>
+              <td>5.10</td>
+              <td>2.49</td>
+              <td>69.2</td>
+              <td>24.6</td>
+          </tr>
+          <tr>
+              <td>22</td>
+              <td><a href="https://www.anthropic.com/news/claude-3-5-sonnet">Claude3.5-Sonnet</a></td>
+              <td>-</td>
+              <td>32</td>
+              <td>50</td>
+              <td>56.5</td>
+              <td>40.3</td>
+              <td>4.17</td>
+              <td>5.99</td>
+              <td>2.73</td>
+              <td>71.3</td>
+              <td>35.6</td>
+          </tr>
+      </tbody>
+  </table>
+  </div>
+
+
+
+
 </section>
 
 <!-- DATASET SECTION -->
