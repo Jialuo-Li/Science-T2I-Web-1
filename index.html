@@ -99,7 +99,7 @@
             <div class="columns is-centered">
                 <div class="column has-text-centered">
                     <h1 class="title is-1 publication-title is-bold">
-                        <img src="static/images/icon/Science-T2I.png" alt="logo" width="50" height="50" />
+                        <img src="static/images/icon/Science-T2I.png" alt="logo" width="50" height="50"/>
                         Science-T2I: Addressing Scientific Illusions in Image Synthesis
                     </h1>
                     <p class="is-size-5" style="color: darkred; font-weight: bold;">CVPR 2025</p>
@@ -238,32 +238,32 @@
                   <tr>
                       <th style="vertical-align: middle; text-align: center;" rowspan="2">Rank</th>
                       <th style="vertical-align: middle; text-align: center;" rowspan="2">Models</th>
-                      <th style="vertical-align: middle; text-align: center;" rowspan="2" onclick="sortTable(3)">Overall</th>
+                      <th style="vertical-align: middle; text-align: center;" rowspan="2" onclick="sortTable(1)">Overall</th>
                       <th colspan="10">Physics</th>
                       <th colspan="4">Chemistry</th>
                       <th colspan="5">Biology</th>
                   </tr>
                   <tr>
                     <!-- <th onclick="sortTable(0)">Models</th> -->
-                      <th onclick="sortTable(4)">GA</th>
-                      <th onclick="sortTable(5)">SO</th>
-                      <th onclick="sortTable(6)">ME</th>
-                      <th onclick="sortTable(7)">AB</th>
-                      <th onclick="sortTable(8)">BU</th>
-                      <th onclick="sortTable(9)">DI</th>
-                      <th onclick="sortTable(10)">EL</th>
-                      <th onclick="sortTable(11)">EV</th>
-                      <th onclick="sortTable(12)">LI</th>
-                      <th onclick="sortTable(13)">Avg</th>
-                      <th onclick="sortTable(14)">RU</th>
-                      <th onclick="sortTable(15)">IM</th>
-                      <th onclick="sortTable(16)">FR</th>
-                      <th onclick="sortTable(17)">Avg</th>
-                      <th onclick="sortTable(18)">LR</th>
-                      <th onclick="sortTable(19)">WR</th>
-                      <th onclick="sortTable(20)">SC</th>
-                      <th onclick="sortTable(21)">RI</th>
-                      <th onclick="sortTable(22)">Avg</th>
+                      <th onclick="sortTable(2)">GA</th>
+                      <th onclick="sortTable(3)">SO</th>
+                      <th onclick="sortTable(4)">ME</th>
+                      <th onclick="sortTable(5)">AB</th>
+                      <th onclick="sortTable(6)">BU</th>
+                      <th onclick="sortTable(7)">DI</th>
+                      <th onclick="sortTable(8)">EL</th>
+                      <th onclick="sortTable(9)">EV</th>
+                      <th onclick="sortTable(10)">LI</th>
+                      <th onclick="sortTable(11)">Avg</th>
+                      <th onclick="sortTable(12)">RU</th>
+                      <th onclick="sortTable(13)">IM</th>
+                      <th onclick="sortTable(14)">FR</th>
+                      <th onclick="sortTable(15)">Avg</th>
+                      <th onclick="sortTable(16)">LR</th>
+                      <th onclick="sortTable(17)">WR</th>
+                      <th onclick="sortTable(18)">SC</th>
+                      <th onclick="sortTable(19)">RI</th>
+                      <th onclick="sortTable(20)">Avg</th>
                   </tr>
               </thead>
               <tbody>
@@ -320,146 +320,6 @@
             </table>
           </div>
         
-
-
-          <table class="js-sort-table" id="results" style="margin-left: auto; margin-right: auto;">
-            <thead>
-              <tr>
-                <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 50px; background-color: #1B212D;" data-js-sort-colNum="none">
-                    #
-                </th>
-                <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 150px; background-color: #1B212D;" data-js-sort-colNum="none">
-                    Model
-                </th>
-                <th rowspan="2" style="vertical-align: middle; width: 100px; background-color: #4A5568;" data-js-sort-colNum="none">
-                    Overall
-                </th>
-                <th colspan="10" class="no-sort" style="vertical-align: middle; width: 300px; background-color: #2C549B" data-js-sort-colNum="12">
-                    Physics
-                </th>
-                <th colspan="4" class="no-sort" style="vertical-align: middle; width: 300px; background-color: #9B2C2C;" data-js-sort-colNum="16">
-                    Chemistry
-                </th>
-                <th colspan="5" class="no-sort" style="vertical-align: middle; width: 300px; background-color: #3C8A5F" data-js-sort-colNum="21">
-                    Biology
-                </th>
-              </tr>
-              <tr>
-                  <th data-js-sort-colNum="3" style="background-color: #2C8A9B;">
-                      GA
-                  </th>
-                  <th data-js-sort-colNum="4" style="background-color: #2C549B;">
-                    SO
-                  </th>
-                  <th data-js-sort-colNum="5" style="background-color: #2C549B;">
-                    ME
-                  </th>
-                  <th data-js-sort-colNum="6" style="background-color: #2C549B;">
-                      AB
-                  </th>
-                  <th data-js-sort-colNum="7" style="background-color: #2C549B;">
-                      BU
-                  </th>
-                  <th data-js-sort-colNum="8" style="background-color: #2C549B;">
-                      DI
-                  </th>
-                  <th data-js-sort-colNum="9" style="background-color: #2C549B;">
-                      EL
-                  </th>
-                  <th data-js-sort-colNum="10" style="background-color: #2C549B;">
-                      EV
-                  </th>
-                  <th data-js-sort-colNum="11" style="background-color: #2C549B;">
-                      LI
-                  </th>
-                  <th data-js-sort-colNum="12" style="background-color: #2C549B;">
-                    Avg
-                  </th>
-                  <th data-js-sort-colNum="13" style="background-color: #9B2C2C;">
-                      RU
-                  </th>
-                  <th data-js-sort-colNum="14" style="background-color: #9B2C2C;">
-                    IM
-                  </th>
-                  <th data-js-sort-colNum="15" style="background-color: #9B2C2C;">
-                    FR
-                  </th>
-                  <th data-js-sort-colNum="16" style="background-color: #9B2C2C;">
-                    Avg
-                  </th>
-                  <th data-js-sort-colNum="17" style="background-color: #3C8A5F;">
-                    LR
-                  </th>
-                  <th data-js-sort-colNum="18" style="background-color: #3C8A5F;">
-                    WR
-                  </th>
-                  <th data-js-sort-colNum="19" style="background-color: #3C8A5F;">
-                    SC
-                  </th>
-                  <th data-js-sort-colNum="20" style="background-color: #3C8A5F;">
-                    RI
-                  </th>
-                  <th data-js-sort-colNum="20" style="background-color: #3C8A5F;">
-                    Avg
-                  </th>
-              </tr>
-            </thead>
-
-            <tbody>
-
-              <tr>
-                <td style="vertical-align: middle;"></td>
-                <td style="vertical-align: middle; font-size: 16px; color: #858383;">Google</td>
-                <td style="vertical-align: middle;">111</td>
-                <td style="vertical-align: middle;">111</td>
-                <td style="vertical-align: middle;">111</td>
-                <td style="vertical-align: middle;">75.0</td>
-                <td style="vertical-align: middle;">81.3</td>
-                <td style="vertical-align: middle;">81.7</td>
-                <td style="vertical-align: middle;">84.5</td>
-                <td style="vertical-align: middle;">74.3</td>
-                <td style="vertical-align: middle;">81.0</td>
-                <td style="vertical-align: middle;">67.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>       
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>       
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>       
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>                            
-              </tr>
-
-              <tr>
-                <td style="vertical-align: middle;"></td>
-                <td style="vertical-align: middle; font-size: 16px; color: #858383;">Google</td>
-                <td style="vertical-align: middle;">111</td>
-                <td style="vertical-align: middle;">111</td>
-                <td style="vertical-align: middle;">111</td>
-                <td style="vertical-align: middle;">75.0</td>
-                <td style="vertical-align: middle;">81.3</td>
-                <td style="vertical-align: middle;">81.7</td>
-                <td style="vertical-align: middle;">84.5</td>
-                <td style="vertical-align: middle;">74.3</td>
-                <td style="vertical-align: middle;">81.0</td>
-                <td style="vertical-align: middle;">67.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle;">77.4</td>
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>       
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>       
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>       
-                <td style="vertical-align: middle; background-color: #E6FFED;">77.4</td>                            
-              </tr>
-          
-            </tbody>                                                   
-          </table> 
-
           <p style="margin-top: -20px;">
             <strong style="color: #22a56e; font-size: 18px;" >Green date</strong> indicates the newly added/updated models  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
             - indicates closed-source models
