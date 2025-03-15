@@ -234,7 +234,7 @@ img {
 }
 
 #sortableTable tbody tr:nth-child(1) td {
-    font-size: 18px;  /* 第一行字体最大 */
+    font-size: 17px;  /* 第一行字体最大 */
     font-weight: 550;  /* 最粗 */
     color: #000;  /* 更深的颜色 */
 }
@@ -246,7 +246,7 @@ img {
 }
 
 #sortableTable tbody tr:nth-child(2) td {
-    font-size: 17px;  /* 第二行字体稍小 */
+    font-size: 16px;  /* 第二行字体稍小 */
     font-weight: 500;  /* 次粗 */
     color: #1a1a1a;
 }
@@ -258,7 +258,7 @@ img {
 }
 
 #sortableTable tbody tr:nth-child(3) td {
-    font-size: 16px;  /* 第三行字体更接近普通大小 */
+    font-size: 15px;  /* 第三行字体更接近普通大小 */
     font-weight: 450;  /* 中等粗细 */
     color: #333;
 }
@@ -270,7 +270,7 @@ img {
 }
 
 #sortableTable tbody tr td {
-    font-size: 15px;  /* 普通行的字体大小 */
+    font-size: 14px;  /* 普通行的字体大小 */
     font-weight: 400;  /* 普通粗细 */
     color: #444;
     vertical-align: middle;
