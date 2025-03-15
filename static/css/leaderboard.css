@@ -11,7 +11,7 @@
   display: block;
 }
 
-.sortableTable {
+#sortableTable1 {
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
@@ -19,37 +19,37 @@
     transition: all 0.3s ease;
     font-size: 18px;
 }
-.sortableTable th, .sortableTable td {
+#sortableTable1 th, #sortableTable1 td {
     padding: 8px;
     transition: all 0.2s ease;
 }
-.sortableTable th {
+#sortableTable1 th {
     cursor: pointer;
     background-color: #4a5568;
     color: white;
     position: relative;
     transition: all 0.3s ease;
 }
-.sortableTable th:hover {
+#sortableTable1 th:hover {
     background-color: #718096;
     transform: translateY(-2px);
 }
-.sortableTable th.sorted-asc::after {
+#sortableTable1 th.sorted-asc::after {
     content: " ▲";
     position: absolute;
     right: 0;
     animation: fadeIn 0.5s ease;
 }
-.sortableTable th.sorted-desc::after {
+#sortableTable1 th.sorted-desc::after {
     content: " ▼";
     position: absolute;
     right: 0;
     animation: fadeIn 0.5s ease;
 }
-.sortableTable tr:nth-child(even) {
+#sortableTable1 tr:nth-child(even) {
     background-color: #f7f9fc;
 }
-.sortableTable tr:hover {
+#sortableTable1 tr:hover {
     background-color: #e8f4f8;
     transform: scale(1.02);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -61,62 +61,62 @@
 
 /* 为不同区域设置不同的背景色 */
 /* Rank */
-.sortableTable td:nth-child(1) {
+#sortableTable1 td:nth-child(1) {
     background-color: #f8fafc;  /* 浅灰色 */
 }
 
 /* Models */
-.sortableTable td:nth-child(2) {
+#sortableTable1 td:nth-child(2) {
     background-color: #e8eef9;  /* 浅蓝灰色 */
 }
 
 /* LLM & #F (columns 3-5) */
-.sortableTable td:nth-child(3) {
+#sortableTable1 td:nth-child(3) {
     background-color: #edf2f7;  /* 浅灰色 */
 }
 
-.sortableTable td:nth-child(4),
-.sortableTable td:nth-child(5),
-.sortableTable td:nth-child(6),
-.sortableTable td:nth-child(7),
-.sortableTable td:nth-child(8),
-.sortableTable td:nth-child(9),
-.sortableTable td:nth-child(10),
-.sortableTable td:nth-child(11),
-.sortableTable td:nth-child(12),
-.sortableTable td:nth-child(13) {
+#sortableTable1 td:nth-child(4),
+#sortableTable1 td:nth-child(5),
+#sortableTable1 td:nth-child(6),
+#sortableTable1 td:nth-child(7),
+#sortableTable1 td:nth-child(8),
+#sortableTable1 td:nth-child(9),
+#sortableTable1 td:nth-child(10),
+#sortableTable1 td:nth-child(11),
+#sortableTable1 td:nth-child(12),
+#sortableTable1 td:nth-child(13) {
     background-color: #F0F8FF;  
 }
 
-.sortableTable td:nth-child(14),
-.sortableTable td:nth-child(15),
-.sortableTable td:nth-child(16),
-.sortableTable td:nth-child(17) {
+#sortableTable1 td:nth-child(14),
+#sortableTable1 td:nth-child(15),
+#sortableTable1 td:nth-child(16),
+#sortableTable1 td:nth-child(17) {
     background-color: #fff1f0; 
 }
 
 /* MCQ (columns 6-7) */
-.sortableTable td:nth-child(18),
-.sortableTable td:nth-child(19),
-.sortableTable td:nth-child(20),
-.sortableTable td:nth-child(21),
-.sortableTable td:nth-child(22) {
+#sortableTable1 td:nth-child(18),
+#sortableTable1 td:nth-child(19),
+#sortableTable1 td:nth-child(20),
+#sortableTable1 td:nth-child(21),
+#sortableTable1 td:nth-child(22) {
     background-color: #e6ffed;  /* 非常浅的绿色 */
 }
 
 /* 奇数行稍微深一点的背景色 */
-.sortableTable tr:nth-child(odd) td {
+#sortableTable1 tr:nth-child(odd) td {
     filter: brightness(0.98);
 }
 
 /* Hover效果 */
-.sortableTable tr:hover td {
+#sortableTable1 tr:hover td {
     filter: brightness(0.95);
     transition: all 0.3s ease;
 }
 
 /* 表头基础样式 */
-.sortableTable thead th {
+#sortableTable1 thead th {
     padding: 12px;
     font-weight: 500;
     text-align: center;
@@ -129,77 +129,77 @@
 
 /* 不同区域的表头样式 */
 /* Rank & Models */
-.sortableTable thead tr:first-child th:nth-child(1),
-.sortableTable thead tr:first-child th:nth-child(2) { 
+#sortableTable1 thead tr:first-child th:nth-child(1),
+#sortableTable1 thead tr:first-child th:nth-child(2) { 
     background-color: #1a202c; 
 }
 
-.sortableTable thead tr:first-child th[colspan="1"]:nth-child(3),
-.sortableTable thead tr:nth-child(2) th:nth-child(1) { 
+#sortableTable1 thead tr:first-child th[colspan="1"]:nth-child(3),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(1) { 
     background-color: #4a5568;  
 }
 
 /* LLM & #F 区域 */
-.sortableTable thead tr:first-child th[colspan="10"]:nth-of-type(4),
-.sortableTable thead tr:nth-child(2) th:nth-child(2),
-.sortableTable thead tr:nth-child(2) th:nth-child(3),
-.sortableTable thead tr:nth-child(2) th:nth-child(4),
-.sortableTable thead tr:nth-child(2) th:nth-child(5),
-.sortableTable thead tr:nth-child(2) th:nth-child(6),
-.sortableTable thead tr:nth-child(2) th:nth-child(7),
-.sortableTable thead tr:nth-child(2) th:nth-child(8),
-.sortableTable thead tr:nth-child(2) th:nth-child(9),
-.sortableTable thead tr:nth-child(2) th:nth-child(10),
-.sortableTable thead tr:nth-child(2) th:nth-child(11) {
+#sortableTable1 thead tr:first-child th[colspan="10"]:nth-of-type(4),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(2),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(3),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(4),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(5),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(6),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(7),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(8),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(9),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(10),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(11) {
     background-color: #3C64AB;  
 }
 
 /* MCQ 区域 */
-.sortableTable thead tr:first-child th[colspan="4"]:nth-of-type(5),
-.sortableTable thead tr:nth-child(2) th:nth-child(12),
-.sortableTable thead tr:nth-child(2) th:nth-child(13),
-.sortableTable thead tr:nth-child(2) th:nth-child(14),
-.sortableTable thead tr:nth-child(2) th:nth-child(15) {
+#sortableTable1 thead tr:first-child th[colspan="4"]:nth-of-type(5),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(12),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(13),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(14),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(15) {
     background-color: #ab3c3c;  
 }
 
 /* Cred. Eval. 区域 */
-.sortableTable thead tr:first-child th[colspan="5"],
-.sortableTable thead tr:nth-child(2) th:nth-child(16),
-.sortableTable thead tr:nth-child(2) th:nth-child(17),
-.sortableTable thead tr:nth-child(2) th:nth-child(18),
-.sortableTable thead tr:nth-child(2) th:nth-child(19),
-.sortableTable thead tr:nth-child(2) th:nth-child(20) {
+#sortableTable1 thead tr:first-child th[colspan="5"],
+#sortableTable1 thead tr:nth-child(2) th:nth-child(16),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(17),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(18),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(19),
+#sortableTable1 thead tr:nth-child(2) th:nth-child(20) {
     background-color: #4ca56f; 
 }
 
 /* 表头悬停效果 */
-.sortableTable thead th:hover {
+#sortableTable1 thead th:hover {
     filter: brightness(1.1);
     transition: all 0.3s ease;
 }
 
 /* 排序指示器样式 */
-.sortableTable th.sorted-asc::after,
-.sortableTable th.sorted-desc::after {
+#sortableTable1 th.sorted-asc::after,
+#sortableTable1 th.sorted-desc::after {
     margin-left: 8px;
     font-size: 0.8em;
 }
 
 /* 确保表格本身的样式配合表头 */
-.sortableTable {
+#sortableTable1 {
     border-collapse: collapse;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* 移除hover效果 */
-.sortableTable th:hover {
+#sortableTable1 th:hover {
     transform: none;
     background-color: inherit;
 }
 
 /* 添加行动画相关样式 */
-.sortableTable tbody tr {
+#sortableTable1 tbody tr {
     transition: all 0.3s ease;
 }
 
@@ -227,49 +227,49 @@ img {
 }
 
 /* 为前三设的高度、字体大小和粗细的过渡效果 */
-.sortableTable tbody tr:nth-child(1) {
+#sortableTable1 tbody tr:nth-child(1) {
     height: 80px;  /* 第一行最高 */
     background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
     transition: all 0.3s ease;
 }
 
-.sortableTable tbody tr:nth-child(1) td {
+#sortableTable1 tbody tr:nth-child(1) td {
     font-size: 17px;  /* 第一行字体最大 */
     font-weight: 550;  /* 最粗 */
     color: #000;  /* 更深的颜色 */
 }
 
-.sortableTable tbody tr:nth-child(2) {
+#sortableTable1 tbody tr:nth-child(2) {
     height: 65px;  /* 第二行次高 */
     background: linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
     transition: all 0.3s ease;
 }
 
-.sortableTable tbody tr:nth-child(2) td {
+#sortableTable1 tbody tr:nth-child(2) td {
     font-size: 16px;  /* 第二行字体稍小 */
     font-weight: 500;  /* 次粗 */
     color: #1a1a1a;
 }
 
-.sortableTable tbody tr:nth-child(3) {
+#sortableTable1 tbody tr:nth-child(3) {
     height: 50px;  /* 第三行最接近普通行高 */
     background: linear-gradient(to bottom, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%);
     transition: all 0.3s ease;
 }
 
-.sortableTable tbody tr:nth-child(3) td {
+#sortableTable1 tbody tr:nth-child(3) td {
     font-size: 15px;  /* 第三行字体更接近普通大小 */
     font-weight: 450;  /* 中等粗细 */
     color: #333;
 }
 
 /* 确保其他行保持正常样式 */
-.sortableTable tbody tr {
+#sortableTable1 tbody tr {
     height: 40px;  /* 普通行的高度 */
     transition: all 0.3s ease;
 }
 
-.sortableTable tbody tr td {
+#sortableTable1 tbody tr td {
     font-size: 14px;  /* 普通行的字体大小 */
     font-weight: 400;  /* 普通粗细 */
     color: #444;
@@ -278,9 +278,284 @@ img {
 }
 
 /* 保持单元格内容垂直居中 */
-.sortableTable tbody td {
+#sortableTable1 tbody td {
     vertical-align: middle;
 }
+
+#sortableTable2 {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+#sortableTable2 th, #sortableTable2 td {
+    padding: 8px;
+    transition: all 0.2s ease;
+}
+#sortableTable2 th {
+    cursor: pointer;
+    background-color: #4a5568;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+#sortableTable2 th:hover {
+    background-color: #718096;
+    transform: translateY(-2px);
+}
+#sortableTable2 th.sorted-asc::after {
+    content: " ▲";
+    position: absolute;
+    right: 0;
+    animation: fadeIn 0.5s ease;
+}
+#sortableTable2 th.sorted-desc::after {
+    content: " ▼";
+    position: absolute;
+    right: 0;
+    animation: fadeIn 0.5s ease;
+}
+#sortableTable2 tr:nth-child(even) {
+    background-color: #f7f9fc;
+}
+#sortableTable2 tr:hover {
+    background-color: #e8f4f8;
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 为不同区域设置不同的背景色 */
+/* Rank */
+#sortableTable2 td:nth-child(1) {
+    background-color: #f8fafc;  /* 浅灰色 */
+}
+
+/* Models */
+#sortableTable2 td:nth-child(2) {
+    background-color: #e8eef9;  /* 浅蓝灰色 */
+}
+
+/* LLM & #F (columns 3-5) */
+#sortableTable2 td:nth-child(3) {
+    background-color: #edf2f7;  /* 浅灰色 */
+}
+
+#sortableTable2 td:nth-child(4),
+#sortableTable2 td:nth-child(5),
+#sortableTable2 td:nth-child(6),
+#sortableTable2 td:nth-child(7),
+#sortableTable2 td:nth-child(8),
+#sortableTable2 td:nth-child(9),
+#sortableTable2 td:nth-child(10),
+#sortableTable2 td:nth-child(11),
+#sortableTable2 td:nth-child(12),
+#sortableTable2 td:nth-child(13) {
+    background-color: #F0F8FF;  
+}
+
+#sortableTable2 td:nth-child(14),
+#sortableTable2 td:nth-child(15),
+#sortableTable2 td:nth-child(16),
+#sortableTable2 td:nth-child(17) {
+    background-color: #fff1f0; 
+}
+
+/* MCQ (columns 6-7) */
+#sortableTable2 td:nth-child(18),
+#sortableTable2 td:nth-child(19),
+#sortableTable2 td:nth-child(20),
+#sortableTable2 td:nth-child(21),
+#sortableTable2 td:nth-child(22) {
+    background-color: #e6ffed;  /* 非常浅的绿色 */
+}
+
+/* 奇数行稍微深一点的背景色 */
+#sortableTable2 tr:nth-child(odd) td {
+    filter: brightness(0.98);
+}
+
+/* Hover效果 */
+#sortableTable2 tr:hover td {
+    filter: brightness(0.95);
+    transition: all 0.3s ease;
+}
+
+/* 表头基础样式 */
+#sortableTable2 thead th {
+    padding: 12px;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    color: white;
+}
+
+/* 不同区域的表头样式 */
+/* Rank & Models */
+#sortableTable2 thead tr:first-child th:nth-child(1),
+#sortableTable2 thead tr:first-child th:nth-child(2) { 
+    background-color: #1a202c; 
+}
+
+#sortableTable2 thead tr:first-child th[colspan="1"]:nth-child(3),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(1) { 
+    background-color: #4a5568;  
+}
+
+/* LLM & #F 区域 */
+#sortableTable2 thead tr:first-child th[colspan="10"]:nth-of-type(4),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(2),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(3),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(4),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(5),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(6),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(7),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(8),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(9),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(10),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(11) {
+    background-color: #3C64AB;  
+}
+
+/* MCQ 区域 */
+#sortableTable2 thead tr:first-child th[colspan="4"]:nth-of-type(5),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(12),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(13),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(14),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(15) {
+    background-color: #ab3c3c;  
+}
+
+/* Cred. Eval. 区域 */
+#sortableTable2 thead tr:first-child th[colspan="5"],
+#sortableTable2 thead tr:nth-child(2) th:nth-child(16),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(17),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(18),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(19),
+#sortableTable2 thead tr:nth-child(2) th:nth-child(20) {
+    background-color: #4ca56f; 
+}
+
+/* 表头悬停效果 */
+#sortableTable2 thead th:hover {
+    filter: brightness(1.1);
+    transition: all 0.3s ease;
+}
+
+/* 排序指示器样式 */
+#sortableTable2 th.sorted-asc::after,
+#sortableTable2 th.sorted-desc::after {
+    margin-left: 8px;
+    font-size: 0.8em;
+}
+
+/* 确保表格本身的样式配合表头 */
+#sortableTable2 {
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 移除hover效果 */
+#sortableTable2 th:hover {
+    transform: none;
+    background-color: inherit;
+}
+
+/* 添加行动画相关样式 */
+#sortableTable2 tbody tr {
+    transition: all 0.3s ease;
+}
+
+/* 添加行交换动画的类 */
+.row-transition {
+    animation: rowMove 0.5s ease;
+}
+
+@keyframes rowMove {
+    0% { opacity: 0.5; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 为所有图片添加过渡效果 */
+img {
+    transition: transform 0.3s ease;
+    display: block;  /* 确保margin: auto生效 */
+    max-width: 100%;  /* 保持响应式 */
+}
+
+
+/* 可选：添加平滑阴影效果增强视觉体验 */
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 为前三设的高度、字体大小和粗细的过渡效果 */
+#sortableTable2 tbody tr:nth-child(1) {
+    height: 80px;  /* 第一行最高 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    transition: all 0.3s ease;
+}
+
+#sortableTable2 tbody tr:nth-child(1) td {
+    font-size: 17px;  /* 第一行字体最大 */
+    font-weight: 550;  /* 最粗 */
+    color: #000;  /* 更深的颜色 */
+}
+
+#sortableTable2 tbody tr:nth-child(2) {
+    height: 65px;  /* 第二行次高 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+    transition: all 0.3s ease;
+}
+
+#sortableTable2 tbody tr:nth-child(2) td {
+    font-size: 16px;  /* 第二行字体稍小 */
+    font-weight: 500;  /* 次粗 */
+    color: #1a1a1a;
+}
+
+#sortableTable2 tbody tr:nth-child(3) {
+    height: 50px;  /* 第三行最接近普通行高 */
+    background: linear-gradient(to bottom, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%);
+    transition: all 0.3s ease;
+}
+
+#sortableTable2 tbody tr:nth-child(3) td {
+    font-size: 15px;  /* 第三行字体更接近普通大小 */
+    font-weight: 450;  /* 中等粗细 */
+    color: #333;
+}
+
+/* 确保其他行保持正常样式 */
+#sortableTable2 tbody tr {
+    height: 40px;  /* 普通行的高度 */
+    transition: all 0.3s ease;
+}
+
+#sortableTable2 tbody tr td {
+    font-size: 14px;  /* 普通行的字体大小 */
+    font-weight: 400;  /* 普通粗细 */
+    color: #444;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+/* 保持单元格内容垂直居中 */
+#sortableTable2 tbody td {
+    vertical-align: middle;
+}
+
+
+
+
 
 .name-link {
     font-size: 18px;
