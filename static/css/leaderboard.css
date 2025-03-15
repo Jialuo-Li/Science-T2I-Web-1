@@ -10,8 +10,7 @@
 .collapse-content.is-active {
   display: block;
 }
-</style>
-<style>
+
 #sortableTable {
     width: 100%;
     border-collapse: collapse;
