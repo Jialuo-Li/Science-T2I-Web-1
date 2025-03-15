@@ -37,13 +37,13 @@
 #sortableTable th.sorted-asc::after {
     content: " ▲";
     position: absolute;
-    right: 0;
+    right: 100px;
     animation: fadeIn 0.5s ease;
 }
 #sortableTable th.sorted-desc::after {
     content: " ▼";
     position: absolute;
-    right: 0;
+    right: 100px;
     animation: fadeIn 0.5s ease;
 }
 #sortableTable tr:nth-child(even) {
