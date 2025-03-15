@@ -235,7 +235,7 @@ img {
 
 #sortableTable1 tbody tr:nth-child(1) td {
     font-size: 17px;  /* 第一行字体最大 */
-    font-weight: 550;  /* 最粗 */
+    font-weight: 525;  /* 最粗 */
     color: #000;  /* 更深的颜色 */
 }
 
@@ -483,7 +483,7 @@ img {
 
 #sortableTable2 tbody tr:nth-child(1) td {
     font-size: 17px;  /* 第一行字体最大 */
-    font-weight: 550;  /* 最粗 */
+    font-weight: 525;  /* 最粗 */
     color: #000;  /* 更深的颜色 */
 }
 
