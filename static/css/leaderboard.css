@@ -152,7 +152,7 @@
 #sortableTable thead tr:nth-child(2) th:nth-child(8),
 #sortableTable thead tr:nth-child(2) th:nth-child(9),
 #sortableTable thead tr:nth-child(2) th:nth-child(10) {
-    background-color: #3212AA;  /* 深灰色 */
+    background-color: #3C64AB;  
 }
 
 /* MCQ 区域 */
@@ -161,7 +161,7 @@
 #sortableTable thead tr:nth-child(2) th:nth-child(12),
 #sortableTable thead tr:nth-child(2) th:nth-child(13),
 #sortableTable thead tr:nth-child(2) th:nth-child(14) {
-    background-color: #9b2c2c;  
+    background-color: #ab3c3c;  
 }
 
 /* Cred. Eval. 区域 */
@@ -171,7 +171,7 @@
 #sortableTable thead tr:nth-child(2) th:nth-child(17),
 #sortableTable thead tr:nth-child(2) th:nth-child(18),
 #sortableTable thead tr:nth-child(2) th:nth-child(19) {
-    background-color: #3c8a5f; 
+    background-color: #4ca56f; 
 }
 
 /* 表头悬停效果 */
