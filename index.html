@@ -946,7 +946,27 @@
             </figure>
           </d-figure>
 
-          <p><strong>Prompt design.</strong> We categorize prompts into three types based on their use in scientific reasoning:
+          <p><strong>Task classification.</strong> Beyond a classification based on scientific disciplines, the tasks can be categorized into two distinct groups:
+          </p>
+          <ol style="margin-left: 10px;">
+            <li style="margin-bottom: 3px;"><strong>Subject-oriented task (ST)</strong>
+              require scientific reasoning to discern how inherent differences between subjects lead to varying visual features under identical conditions.
+            </li>
+            <li style="margin-bottom: 3px;"><strong>Condition-oriented task (CT)</strong>
+              focus on how a single condition affects various subjects. Scientific reasoning in these tasks centers on the applied condition, not the subject's individual properties. 
+            </li>
+          </ol>
+          
+          <d-figure id="fig-vision_connector">
+            <figure>
+                <img data-zoomable="" draggable="false" src="static/images/classification.png" style="width: 80%;display: block; margin: 0 auto;">
+                <figcaption>
+                  <strong>Fig 3:</strong> Task classification of Science-T2I.
+                </figcaption>
+            </figure>
+          </d-figure>
+
+          <p><strong>Prompt design.</strong> In Science-T2I, we categorize prompts into three types based on their use in scientific reasoning:
           </p>
           <ol style="margin-left: 10px;">
             <li style="margin-bottom: 3px;"><strong>Implicit prompt (IP).</strong>
@@ -959,12 +979,12 @@
               Provides explicit but scientifically inaccurate descriptions, focusing on surface-level interpretations (e.g., interpreting "an unripe apple" as "a red apple").
             </li>
           </ol>
-          
+
           <d-figure id="fig-vision_connector">
             <figure>
                 <img data-zoomable="" draggable="false" src="static/images/dataset_pipeline.png" style="width: 80%;display: block; margin: 0 auto;">
                 <figcaption>
-                  <strong>Fig 3:</strong> Data curation pipeline of Science-T2I.
+                  <strong>Fig 4:</strong> Data curation pipeline of Science-T2I.
                 </figcaption>
             </figure>
           </d-figure>
@@ -1093,7 +1113,7 @@
             <figure>
                 <img data-zoomable="" draggable="false" src="static/images/SciScore_results.png" style="width: 80%;display: block; margin: 0 auto;">
                 <figcaption>
-                  <strong>Fig 4:</strong> Performance comparison of different models on Science-T2I-S&C across different subjects.
+                  <strong>Fig 5:</strong> Performance comparison of different models on Science-T2I-S&C across different subjects.
                 </figcaption>
             </figure>
           </d-figure>
@@ -1116,7 +1136,7 @@
             <figure>
                 <img data-zoomable="" draggable="false" src="static/images/SciScore_results.png" style="width: 80%;display: block; margin: 0 auto;">
                 <figcaption>
-                  <strong>Fig 4:</strong> Performance comparison of different models on Science-T2I-S&C across different subjects.
+                  <strong>Fig 6:</strong> Performance comparison of different models on Science-T2I-S&C across different subjects.
                 </figcaption>
             </figure>
           </d-figure>
