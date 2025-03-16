@@ -931,6 +931,7 @@
                 </figcaption>
             </figure>
           </d-figure>
+
           <p><strong>Prompt Design.</strong> We categorize prompts into three types based on their use in scientific reasoning:
           </p>
           <ol style="margin-left: 10px;">
@@ -1029,6 +1030,22 @@
                 height="560px"
                 ></iframe>
             </div>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  const button = document.querySelector('[aria-controls="benchmark_table"]');
+                  if (button) {
+                      button.addEventListener('click', function() {
+                          const content = document.getElementById('benchmark_table');
+                          if (content.style.display === 'none') {
+                              content.style.display = 'block';
+                          } else {
+                              content.style.display = 'none';
+                          }
+                      });
+                      button.click(); // 默认展开
+                  }
+              });
+            </script>
           </div>
 
         </div>
