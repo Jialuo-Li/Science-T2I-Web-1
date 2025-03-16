@@ -925,14 +925,14 @@
           
           <d-figure id="fig-vision_connector">
             <figure>
-                <img data-zoomable="" draggable="false" src="static/images/data_stat.png" alt="Video length in VDC" style="width: 80%;display: block; margin: 0 auto;">
+                <img data-zoomable="" draggable="false" src="static/images/data_stat.png" style="width: 80%;display: block; margin: 0 auto;">
                 <figcaption>
                   <strong>Fig 2:</strong> Data statistics (left) of and wordcloud (right) of Science-T2I.
                 </figcaption>
             </figure>
           </d-figure>
 
-          <p><strong>Prompt Design.</strong> We categorize prompts into three types based on their use in scientific reasoning:
+          <p><strong>Prompt design.</strong> We categorize prompts into three types based on their use in scientific reasoning:
           </p>
           <ol style="margin-left: 10px;">
             <li style="margin-bottom: 3px;"><strong>Implicit prompt (IP).</strong>
@@ -945,6 +945,20 @@
               Provides explicit but scientifically inaccurate descriptions, focusing on surface-level interpretations (e.g., interpreting "an unripe apple" as "a red apple").
             </li>
           </ol>
+          
+          <p><strong>Data curation.</strong> We utilize GPT-4o to create templates and generate corresponding prompts during the data curation process. These outputs are then used to guide T2I models for image generation. Following this, human annotators review and filter the data, incorporating insights from an additional website knowledgebase to ensure the reliability and accuracy of the final dataset.
+          </p>
+
+          <d-figure id="fig-vision_connector">
+            <figure>
+                <img data-zoomable="" draggable="false" src="static/images/dataset_pipeline.png" style="width: 80%;display: block; margin: 0 auto;">
+                <figcaption>
+                  <strong>Fig 3:</strong> Data curation pipeline of Science-T2I.
+                </figcaption>
+            </figure>
+          </d-figure>
+
+
           <div id="results-carousel" class="carousel results-carousel">  
         
             <div class="content has-text-centered">
