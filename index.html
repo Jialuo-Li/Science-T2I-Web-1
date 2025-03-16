@@ -1107,26 +1107,41 @@
         <h2 class="title is-2" style="text-align: center;">SciScore: Evaluating Scientific Authenticity of Images</h2>
         <br>
         <div class="content has-text-justified">
+
           <p>Leveraging Science-T2I, we present SciScore, an end-to-end reward model that refines the assessment of generated images based on scientific knowledge, which is achieved by augmenting both the scientific comprehension and visual capabilities of pre-trained CLIP model. The qualitative performance of SciScore is demonstrated in Fig. 1.
           </p>
+
           <d-figure id="fig-vision_connector">
             <figure>
                 <img data-zoomable="" draggable="false" src="static/images/SciScore_results.jpg" style="width: 80%;display: block; margin: 0 auto;">
                 <figcaption>
-                  <strong>Fig 5:</strong> (Left) Performance comparison of different models on Science-T2I-S&C across different subjects. (Right) Performance of SciScore in ST and CT.
+                  <strong>Tab 1:</strong> (Left) Performance comparison of different models on Science-T2I-S&C across different subjects. (Right) Performance of SciScore in ST and CT.
                 </figcaption>
             </figure>
           </d-figure>
+
           <p><strong>Generalization of SciScore to complex scenes.</strong> SciScore generalizes well to complex scenes Science-T2I-C beyond simple ones Science-T2I-S, showing it can focus on relevant regions and ignore distractions.
           </p>
+
           <p><strong>Generalization of SciScore across ST and CT.</strong> A significant performance gap emerged between ST and CT, with most failures in ST. This is expected, as CT relies on generalizable visual features, while ST depends on subject-specific details. Lacking exposure to novel subjects, SciScore struggles to identify accurate visual contents.
           </p>
 
           <h3 class="title is-4">Benchmarking T2I Generation with SciScore.</h3>
 
-          <p>By leveraging the superior performance of SciScore, rather than relying on LMMs that require complex prompting techniques, we propose an end-to-end utilization of SciScore for benchmarking current T2I models on our predefined scientific reasoning tasks.
+          <p><strong>Three-dimensional evaluation.</strong> We evaluated T2I models' scientific reasoning by assessing the alignment between images generated from implicit prompts and those from (1) explicit prompts, (2) superficial prompts, and (3) implicit prompts themselves. 
           </p>
-          
+
+          <d-figure id="fig-vision_connector">
+            <figure>
+                <img data-zoomable="" draggable="false" src="static/images/benchmark.png" style="width: 80%;display: block; margin: 0 auto;">
+                <figcaption>
+                  <strong>Tab 2:</strong> Performance of T2I Models on SciScore.
+                </figcaption>
+            </figure>
+          </d-figure>
+
+          <p><strong>Analysis on reasoning capability.</strong> Current T2I models struggle with implicit meanings, favoring literal interpretations over scientific concepts. Most models score below 50 in ND, averaging around 35, indicating a significant deficiency.
+          </p>
         </div>
     </div>
   </div>
