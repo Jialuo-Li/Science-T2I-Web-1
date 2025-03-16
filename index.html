@@ -867,49 +867,49 @@
   <!-- <div style="width: 80%;"> -->
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <br>
-        <div class="collapsible-section">
-            <button class="button is-fullwidth toggle-section" aria-controls="benchmark_table" style="background-color: white;">
-                <span>View benchmark</span>
-                <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-            </button>
-            <div id="benchmark_table" class="collapse-content">
-              <div style="display: flex;">
-                  <iframe
-                      src="https://huggingface.co/datasets/Jialuo21/Science-T2I-S/embed/viewer/default/test"
-                      frameborder="0"
-                      width="50%"
-                      height="560px"
-                  ></iframe>
-                  <iframe
-                      src="https://huggingface.co/datasets/Jialuo21/Science-T2I-C/embed/viewer/default/test"
-                      frameborder="0"
-                      width="50%"
-                      height="560px"
-                  ></iframe>
-              </div>
-          </div>
+      <div class="collapsible-section">
+        <button class="button is-fullwidth toggle-section" aria-controls="benchmark_table" style="background-color: white;">
+            <span>View benchmark</span>
+            <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+        </button>
+        <div id="benchmark_table" class="collapse-content" style="display: none;">
+            <div style="display: flex;">
+                <iframe
+                    src="https://huggingface.co/datasets/Jialuo21/Science-T2I-S/embed/viewer/default/test"
+                    frameborder="0"
+                    width="50%"
+                    height="560px"
+                ></iframe>
+                <iframe
+                    src="https://huggingface.co/datasets/Jialuo21/Science-T2I-C/embed/viewer/default/test"
+                    frameborder="0"
+                    width="50%"
+                    height="560px"
+                ></iframe>
+            </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const button = document.querySelector('[aria-controls="benchmark_table"]');
+                if (button) {
+                    button.addEventListener('click', function() {
+                        const content = document.getElementById('benchmark_table');
+                        if (content.style.display === 'none') {
+                            content.style.display = 'block';
+                        } else {
+                            content.style.display = 'none';
+                        }
+                    });
+                    button.click(); // 默认展开
+                }
+            });
+        </script>
+      </div>
     </div>
   </div>
 
-  <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          const button = document.querySelector('[aria-controls="benchmark_table"]');
-          if (button) {
-              button.addEventListener('click', function() {
-                  const content = document.getElementById('benchmark_table');
-                  if (content.style.display === 'none') {
-                      content.style.display = 'block';
-                  } else {
-                      content.style.display = 'none';
-                  }
-              });
-          }
-      });
-  </script>
 </section>
 
 <section class="section" id="abstract">
@@ -1044,34 +1044,26 @@
 
           <br>
           <div class="collapsible-section">
-            <button class="button is-fullwidth toggle-section" aria-controls="benchmark_table" style="background-color: white;">
-                <span>View benchmark</span>
+            <button class="button is-fullwidth toggle-section" aria-controls="data_table" style="background-color: white;">
+                <span>View trainset</span>
                 <span class="icon is-small">
                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                 </span>
             </button>
-            <div id="benchmark_table" class="collapse-content" style="display: none;">
-                <div style="display: flex;">
-                    <iframe
-                        src="https://huggingface.co/datasets/Jialuo21/Science-T2I-S/embed/viewer/default/test"
-                        frameborder="0"
-                        width="50%"
-                        height="560px"
-                    ></iframe>
-                    <iframe
-                        src="https://huggingface.co/datasets/Jialuo21/Science-T2I-C/embed/viewer/default/test"
-                        frameborder="0"
-                        width="50%"
-                        height="560px"
-                    ></iframe>
-                </div>
+            <div id="data_table" class="collapse-content" style="display: none;">
+              <iframe
+              src="https://huggingface.co/datasets/Jialuo21/Science-T2I-Trainset/embed/viewer/default/train"
+              frameborder="0"
+              width="100%"
+              height="560px"
+              ></iframe>
             </div>
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                    const button = document.querySelector('[aria-controls="benchmark_table"]');
+                    const button = document.querySelector('[aria-controls="data_table"]');
                     if (button) {
                         button.addEventListener('click', function() {
-                            const content = document.getElementById('benchmark_table');
+                            const content = document.getElementById('data_table');
                             if (content.style.display === 'none') {
                                 content.style.display = 'block';
                             } else {
@@ -1114,23 +1106,6 @@
   // 默认显示 Table 1
   showTable1Button.classList.add('active');
 </script>
-
-<style>
-  .collapse-content {
-    display: none;
-    margin-top: 10px;
-  }
-  .collapse-content.is-active {
-    display: block;
-  }
-  /* .toggle-section .icon.is-small {
-    transition: transform 0.3s ease;
-  } */
-  /* .toggle-section .fa-angle-up {
-    transform: rotate(180deg);
-  } */
-</style>
-
 </body>
 </html>
 
