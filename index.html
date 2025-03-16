@@ -867,29 +867,39 @@
                 <i class="fas fa-angle-down" aria-hidden="true"></i>
             </span>
         </button>
-        <div id="benchmark_table" class="collapse-content" style="display: flex;">
-            <iframe
-                src="https://huggingface.co/datasets/Jialuo21/Science-T2I-S/embed/viewer/default/test"
-                frameborder="0"
-                width="50%"
-                height="560px"
-            ></iframe>
-            <iframe
-                src="https://huggingface.co/datasets/Jialuo21/Science-T2I-C/embed/viewer/default/test"
-                frameborder="0"
-                width="50%"
-                height="560px"
-            ></iframe>
+        <div id="benchmark_table" class="collapse-content" style="display: none;">
+            <div style="display: flex;">
+                <iframe
+                    src="https://huggingface.co/datasets/Jialuo21/Science-T2I-S/embed/viewer/default/test"
+                    frameborder="0"
+                    width="50%"
+                    height="560px"
+                ></iframe>
+                <iframe
+                    src="https://huggingface.co/datasets/Jialuo21/Science-T2I-C/embed/viewer/default/test"
+                    frameborder="0"
+                    width="50%"
+                    height="560px"
+                ></iframe>
+            </div>
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const button = document.querySelector('[aria-controls="benchmark_table"]');
                 if (button) {
-                    button.click();
+                    button.addEventListener('click', function() {
+                        const content = document.getElementById('benchmark_table');
+                        if (content.style.display === 'none') {
+                            content.style.display = 'block';
+                        } else {
+                            content.style.display = 'none';
+                        }
+                    });
+                    button.click(); // 默认展开
                 }
             });
         </script>
-    </div>
+      </div>
     </div>
   </div>
 </section>
