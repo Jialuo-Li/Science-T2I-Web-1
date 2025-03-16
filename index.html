@@ -1126,7 +1126,7 @@
           <p><strong>Generalization of SciScore across ST and CT.</strong> A significant performance gap emerged between ST and CT, with most failures in ST. This is expected, as CT relies on generalizable visual features, while ST depends on subject-specific details. Lacking exposure to novel subjects, SciScore struggles to identify accurate visual contents.
           </p>
 
-          <h3 class="title is-4">Benchmarking T2I Generation with SciScore.</h3>
+          <h3 class="title is-4">Benchmarking T2I Generation with SciScore</h3>
 
           <p><strong>Three-dimensional evaluation.</strong> We evaluated T2I models' scientific reasoning by assessing the alignment between images generated from implicit prompts and those from (1) explicit prompts, (2) superficial prompts, and (3) implicit prompts themselves. 
           </p>
@@ -1153,13 +1153,19 @@
         <h2 class="title is-2" style="text-align: center;">Two-stage Fine-tuning Framework</h2>
         <br>
         <div class="content has-text-justified">
-          <p>We propose a two-stage training framework, comprising a supervised fine-tuning phase and a masked online fine-tuning phase, to incorporate scientific knowledge into existing generative models.
+          <p>We propose a two-stage training framework, comprising a supervised fine-tuning phase and a masked online fine-tuning phase, to incorporate scientific knowledge into existing generative models utilizing Science-T2I.
           </p>
+
+          <p><strong>Supervised fine-tuning.</strong> For this phase, we utilize FLUX as our base model and train it on the Science-T2I, employing FLUX's native rectified flow training objective without any modifications.
+          </p>
+
+          <p><strong>Online fine-tuning.</strong> In this phase, we implement a masked online fine-tuning approach, incorporating SciScore as a reward model to direct the learning process through the DPO training objective.
+
           <d-figure id="fig-vision_connector">
             <figure>
-                <img data-zoomable="" draggable="false" src="static/images/SciScore_results.png" style="width: 80%;display: block; margin: 0 auto;">
+                <img data-zoomable="" draggable="false" src="static/images/train_pipeline.png" style="width: 80%;display: block; margin: 0 auto;">
                 <figcaption>
-                  <strong>Fig 6:</strong> Performance comparison of different models on Science-T2I-S&C across different subjects.
+                  <strong>Fig 5:</strong> Online fine-tuning pipeline.
                 </figcaption>
             </figure>
           </d-figure>
